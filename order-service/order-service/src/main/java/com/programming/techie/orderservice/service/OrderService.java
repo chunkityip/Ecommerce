@@ -22,6 +22,8 @@ public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient webClient;
 
+
+    //A method to place Order by using API
     public void placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
         order.setOrderNumber(UUID.randomUUID().toString());
