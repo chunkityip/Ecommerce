@@ -15,12 +15,14 @@ public class ProductController {
 
     private final ProductRepository productRepository;
 
+    //A method to find all the product
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Product> findAll() {
         return productRepository.findAll();
     }
 
+    //A method to create a product
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody Product product) {
